@@ -1,8 +1,8 @@
 # Test Your First API
 
-If you want to try Aion GraphQL API without deploying your own instance, you can do so.
+If you want to try AION GraphQL API without deploying your own instance, you can do so.
 
-The following URL can be accessed to try out GraphQL queries on the browser. This instanace is connected to Aion Mainnet.
+The following URL can be accessed to try out GraphQL queries on the browser. This instanace is connected to AION Mainnet.
 
 This instance is available for the community to quickly test and develop application. But don't use this instance for your production deployment.
 
