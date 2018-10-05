@@ -18,7 +18,7 @@ If you want to invoke GraphQL API from your application, use the following url :
 
 ### Get Latest Transactions
 
-Let's get the latest 20 transactions.
+Let's get the few recent transactions.
 
 Run the following query in the GraphQL Playground's editor.
 
