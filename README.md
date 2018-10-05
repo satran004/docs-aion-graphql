@@ -1,6 +1,6 @@
 # Overview
 
-**AION GraphQL** is a GraphQL server implementation for AION blockchain. This project exposes a GraphQL API endpoint, which can be used to interact with AION blockchain. Internally it uses Java API provided by Aion.
+\*\*\*\*[**AION GraphQL**](https://github.com/satran004/aion-graphql) is a GraphQL server implementation for AION blockchain. This project exposes a GraphQL API endpoint, which can be used to interact with AION blockchain. Internally it uses Java API provided by Aion.
 
 Followings are few of the major functionalities which can be performed using this API layer :
 

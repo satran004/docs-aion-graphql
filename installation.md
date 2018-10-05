@@ -1,6 +1,6 @@
 # Installation
 
-[Aion GraphQL](https://github.com/satran004/aion-graphql) library is using Spring Boot framework to expose the API endpoint.
+[AION GraphQL](https://github.com/satran004/aion-graphql) library is using Spring Boot framework to expose the API endpoint.
 
 **System Requirements:**
 
