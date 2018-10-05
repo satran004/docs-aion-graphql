@@ -4,6 +4,7 @@
 * [Test Your First API](firstapicall.md)
 * [Installation](installation.md)
 * [GraphQL API Types](graphql-api-types.md)
+* [API Doc](https://satran004.github.io/aion-graphql-docs/)
 
 ## Query
 
