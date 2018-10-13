@@ -10,6 +10,28 @@
 >
 > Aion Kernel Installed on a server
 
+**Setup from Binary**
+
+Download the latest release binary from [GitHub](https://github.com/satran004/aion-graphql/releases) repo.
+
+`$> unzip aion-graphql-dist-[version].zip`
+
+or
+
+`$> tar xvf aion-graphql-dist-[version].tar`
+
+Go to extracted folder aion-graphql-dist-\[version\]
+
+Start GraphQL server
+
+`$> bin/aion-graphql`
+
+_on Windows :_
+
+`bin\aion-graphql.bat`
+
+**Note:** Make sure you start the server inside _aion-graphql-dist-\[version\]_  folder only. Starting server inside bin folder will not work.
+
 **Build from Source**
 
 **`git clone https://github.com/satran004/aion-graphql.git`**
