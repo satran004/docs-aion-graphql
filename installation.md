@@ -44,7 +44,7 @@ _on Windows :_
 
 **`git clone https://github.com/satran004/aion-graphql.git`**
 
-**`$> ./gradlew clean build`**
+**`$> ./gradlew clean build -x integrationTest`**
 
 _**To run**_ 
 
