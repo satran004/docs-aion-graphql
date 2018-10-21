@@ -1,4 +1,280 @@
+---
+description: This page provides high level apis to get block details.
+---
+
 # blkApi - Block Api
 
-TBD
+### 1. Get Last 3 blocks
+
+**Query**
+
+```text
+{
+  blockApi {
+    blocks(first: 3) {
+      number
+      hash
+      parentHash
+      nrgConsumed
+      nrgLimit
+      difficulty
+      totalDifficulty
+      bloom
+      minerAddress
+      extraData
+      txTrieRoot
+      txDetails {
+        to
+        from
+        value
+        timestamp
+      }
+      
+    }
+  }
+}
+```
+
+**Result:**
+
+```text
+{
+  "data": {
+    "blockApi": {
+      "blocks": [
+        {
+          "number": 1482975,
+          "hash": "4bc0a37c8bb61f0470ecf08cb698ef14d532d150b28f6d6785b4f2e6875ca36f",
+          "parentHash": "bd2744fbb1f4ec0124f98a12d3baab338932135d1ddd5370daca9110f618c1e9",
+          "nrgConsumed": 0,
+          "nrgLimit": 15012449,
+          "difficulty": 17908270,
+          "totalDifficulty": 19004522299191,
+          "bloom": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "minerAddress": "a0061525a5e19470069c176cdeb7f578d537debdfce2fde7f656498f969a5981",
+          "extraData": "41494f4e00000000000000000000000000000000000000000000000000000000",
+          "txTrieRoot": "45b0cfc220ceec5b7c1c62c4d4193d38e4eba48e8815729ce75f9c0ab0e4c1c0",
+          "txDetails": []
+        },
+        {
+          "number": 1482974,
+          "hash": "bd2744fbb1f4ec0124f98a12d3baab338932135d1ddd5370daca9110f618c1e9",
+          "parentHash": "e5303faca919d063e2b5d9817b8fa9de0a496ba1eed5b381e0ea1e871842f7fa",
+          "nrgConsumed": 312212,
+          "nrgLimit": 14997803,
+          "difficulty": 17917018,
+          "totalDifficulty": 19004504390921,
+          "bloom": "00000000000000000000000000000000000200000000000008200000000000000000000000000000000002000000000400000000000000000000100000010000000000000000000400000000000000040000000000000000000000000100000000020000000000000000000000000000000000000000000021000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000800008000000000000000000000000000000400000010000000002000000400000000000000001000000000000000000000000000000000000080000000000000000200000",
+          "minerAddress": "a08091ab0325e384ac45e560d2f85e4b741363aa98881d52d54233a02b33fcaa",
+          "extraData": "4c55584f52000000000000000000000000000000000000000000000000000000",
+          "txTrieRoot": "9f27863bcec7c775c93688361d634f5147ff00f23c9a6349d0732b4b5de74bd0",
+          "txDetails": [
+            {
+              "to": "0000000000000000000000000000000000000000000000000000000000000200",
+              "from": "a00cfb076f34aae5649c87067a61c2b459616063064f67594bba6e1d79da6eba",
+              "value": 0,
+              "timestamp": 0
+            },
+            {
+              "to": "a0a1dfe30b0c12e0aceb5582c879efcf9502b9bbc28e44601847a86c3a778b68",
+              "from": "a08fbc834b450044e750b90b2a43fec15ba03fd0c20fd5a3463f9f394235db5d",
+              "value": 1483009390410877000,
+              "timestamp": 0
+            },
+            {
+              "to": "a0ca678a118a9fc115cce95753470771fb583f2dcebc66214be973a94a0f904e",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1759306926357000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a0989f61c8df69b4797c36eb5e0f9d96877ef5f4faf19a809096192dab4792fa",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1513547297220000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a0ec7509f91616f265113cefaee186fec9eac93cbd098fd289fb454adbbb137c",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1589379992967000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a07da7d3d8484c728641f6f17ea8df51bdc07e62c07bd6120e8e9ee0e24491f2",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1529760354059000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a08a0c7d7da7a106fa4925dd2032229060c300bc9401406333e0efa57fbc5148",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1586628448094000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a0a774e22a2293f84c98df3d3c91dc7fe81ce80ddc3ef84341b620a73275e4e0",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 2289269573242000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a065e2c978e79879734d33204b2184ea445476562387410329e09caa6720bde2",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1534654067836000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a008038936c6c4db5b32e7a38734af165c53eedb96a72c4061ec85fe9b920402",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1551199296703000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a042fc73973a65d3ba070b51738202f485d17f8464ded1004af67daa99e2ec4e",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1556266190867000000,
+              "timestamp": 0
+            },
+            {
+              "to": "a0c1514e03ec892b661b7429ffd9c949764af874ec0f59dcad9abba706d2f932",
+              "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+              "value": 1590611329697000000,
+              "timestamp": 0
+            }
+          ]
+        },
+        {
+          "number": 1482973,
+          "hash": "e5303faca919d063e2b5d9817b8fa9de0a496ba1eed5b381e0ea1e871842f7fa",
+          "parentHash": "6249d71b6b53346c522556310f5de94ffb3e38533930d634966e2997f404d5d8",
+          "nrgConsumed": 0,
+          "nrgLimit": 15012463,
+          "difficulty": 17908274,
+          "totalDifficulty": 19004486473903,
+          "bloom": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "minerAddress": "a08091ab0325e384ac45e560d2f85e4b741363aa98881d52d54233a02b33fcaa",
+          "extraData": "4c55584f52000000000000000000000000000000000000000000000000000000",
+          "txTrieRoot": "45b0cfc220ceec5b7c1c62c4d4193d38e4eba48e8815729ce75f9c0ab0e4c1c0",
+          "txDetails": []
+        }
+      ]
+    }
+  }
+}
+```
+
+### 2. Find a block by block number
+
+**Query**
+
+```text
+{
+  blockApi {
+    block(number: 1482974) {
+      number
+      hash
+      parentHash
+      nrgConsumed
+      nrgLimit
+      difficulty
+      totalDifficulty
+      bloom
+      minerAddress
+      extraData
+      txTrieRoot
+      txDetails {
+        to
+        from
+        value
+      }
+    }
+  }
+}
+```
+
+**Result**
+
+```text
+{
+  "data": {
+    "blockApi": {
+      "block": {
+        "number": 1482974,
+        "hash": "bd2744fbb1f4ec0124f98a12d3baab338932135d1ddd5370daca9110f618c1e9",
+        "parentHash": "e5303faca919d063e2b5d9817b8fa9de0a496ba1eed5b381e0ea1e871842f7fa",
+        "nrgConsumed": 312212,
+        "nrgLimit": 14997803,
+        "difficulty": 17917018,
+        "totalDifficulty": 19004504390921,
+        "bloom": "00000000000000000000000000000000000200000000000008200000000000000000000000000000000002000000000400000000000000000000100000010000000000000000000400000000000000040000000000000000000000000100000000020000000000000000000000000000000000000000000021000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000800008000000000000000000000000000000400000010000000002000000400000000000000001000000000000000000000000000000000000080000000000000000200000",
+        "minerAddress": "a08091ab0325e384ac45e560d2f85e4b741363aa98881d52d54233a02b33fcaa",
+        "extraData": "4c55584f52000000000000000000000000000000000000000000000000000000",
+        "txTrieRoot": "9f27863bcec7c775c93688361d634f5147ff00f23c9a6349d0732b4b5de74bd0",
+        "txDetails": [
+          {
+            "to": "0000000000000000000000000000000000000000000000000000000000000200",
+            "from": "a00cfb076f34aae5649c87067a61c2b459616063064f67594bba6e1d79da6eba",
+            "value": 0
+          },
+          {
+            "to": "a0a1dfe30b0c12e0aceb5582c879efcf9502b9bbc28e44601847a86c3a778b68",
+            "from": "a08fbc834b450044e750b90b2a43fec15ba03fd0c20fd5a3463f9f394235db5d",
+            "value": 1483009390410877000
+          },
+          {
+            "to": "a0ca678a118a9fc115cce95753470771fb583f2dcebc66214be973a94a0f904e",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1759306926357000000
+          },
+          {
+            "to": "a0989f61c8df69b4797c36eb5e0f9d96877ef5f4faf19a809096192dab4792fa",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1513547297220000000
+          },
+          {
+            "to": "a0ec7509f91616f265113cefaee186fec9eac93cbd098fd289fb454adbbb137c",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1589379992967000000
+          },
+          {
+            "to": "a07da7d3d8484c728641f6f17ea8df51bdc07e62c07bd6120e8e9ee0e24491f2",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1529760354059000000
+          },
+          {
+            "to": "a08a0c7d7da7a106fa4925dd2032229060c300bc9401406333e0efa57fbc5148",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1586628448094000000
+          },
+          {
+            "to": "a0a774e22a2293f84c98df3d3c91dc7fe81ce80ddc3ef84341b620a73275e4e0",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 2289269573242000000
+          },
+          {
+            "to": "a065e2c978e79879734d33204b2184ea445476562387410329e09caa6720bde2",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1534654067836000000
+          },
+          {
+            "to": "a008038936c6c4db5b32e7a38734af165c53eedb96a72c4061ec85fe9b920402",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1551199296703000000
+          },
+          {
+            "to": "a042fc73973a65d3ba070b51738202f485d17f8464ded1004af67daa99e2ec4e",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1556266190867000000
+          },
+          {
+            "to": "a0c1514e03ec892b661b7429ffd9c949764af874ec0f59dcad9abba706d2f932",
+            "from": "a0a1e55cbbffc99d9dcaf56e5350847267471cd6d69d4dead14953e5e82d97bf",
+            "value": 1590611329697000000
+          }
+        ]
+      }
+    }
+  }
+}
+```
 
